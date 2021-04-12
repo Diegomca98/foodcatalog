@@ -1,0 +1,11 @@
+header nav.bg-light {
+    background: #00000033!important;
+}
+
+body {
+    background: #f8f9fa!important;
+}
+
+.details {
+    margin-top: 2em;
+}

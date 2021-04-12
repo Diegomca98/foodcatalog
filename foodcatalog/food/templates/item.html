@@ -1,0 +1,18 @@
+{% extends 'shared/menu.html' %}
+{% block content %}
+
+<div class="container details">
+    <div class="row">
+        <div class="col">
+            <img class="card" height="300px" src="{{ item.item_image }}">
+        </div>
+        <div class="col">
+            <h1 class="text-right">{{ item.item_name }}</h1>
+            <hr>
+            <h3>{{ item.item_description }}</h3>
+            <h5>${{ item.item_price }}</h5>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
