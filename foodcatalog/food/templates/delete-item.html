@@ -1,0 +1,11 @@
+{% extends 'shared/menu.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <h2 class="confirmation">Are you sure you want to delete {{item.item_name}}?</h2>
+        <div class="centrar"><button class="btn btn-primary" type="submit">Confirm</button></div>
+    </form>
+</div>
+{% endblock %}

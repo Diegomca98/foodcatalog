@@ -6,6 +6,20 @@ body {
     background: #f8f9fa!important;
 }
 
-.details {
+.details,
+form {
     margin-top: 2em;
+}
+
+h2.confirmation {
+    text-align: center;
+}
+
+.centrar {
+    margin: auto!important;
+    display: flex!important;
+}
+
+.centrar button {
+    margin: auto!important;
 }
