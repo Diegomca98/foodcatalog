@@ -1,0 +1,14 @@
+{% extends 'shared/menu.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img width="150px" height="150px" src="{{ user.profile.image.url }}">
+            </div>
+            <div class="col-auto">
+                <h1>{{ user.username }}</h1>
+                <h6>{{ user.profile.location }}</h6>
+            </div>
+        </div>
+    </div>
+{% endblock %}
