@@ -1,7 +1,7 @@
 {% extends 'shared/menu.html' %}
 {% block content %}
 
-<div class="container details">
+<!--<div class="container details">
     <div class="row">
         <div class="col">
             <img class="card" height="300px" src="{{ item.item_image }}">
@@ -12,6 +12,21 @@
             <h3>{{ item.item_description }}</h3>
             <h5>${{ item.item_price }}</h5>
             <a class="btn btn-danger" href="{% url 'delete' item.id %}">Delete</a>
+        </div>
+    </div>
+</div>-->
+<div class="container details">
+    <div class="row">
+        <div class="col">
+            <img class="card" height="300px" src="{{ object.item_image }}">
+        </div>
+        <div class="col">
+            <h1 class="text-right">{{ object.item_name }}</h1>
+            <hr>
+            <h3>{{ object.item_description }}</h3>
+            <h5>${{ object.item_price }}</h5>
+            <p><b>Added by:</b> {{ object.user_name }}</p>
+            <a class="btn btn-danger" href="{% url 'delete' object.id %}">Delete</a>
         </div>
     </div>
 </div>

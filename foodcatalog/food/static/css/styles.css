@@ -26,4 +26,25 @@ h2.confirmation {
 
 body .container {
     padding-top: 1em;
+    padding-bottom: 4em!important;
+}
+
+button.rounded-pill {
+    border-radius: 12px;
+    width: 100%;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+p.log-reg {
+    padding-top: 1em;
+}
+
+div.row.sep,
+button.sep {
+    margin-top: 1em;
+}
+
+div.row.sep input {
+    width: 100%;
 }

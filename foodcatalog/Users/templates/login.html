@@ -1,5 +1,40 @@
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+{% extends 'shared/menu.html' %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card rounded">
+                    <div class="card-header bg-info text-white text-right">
+                        <div class="card-title">
+                            <h3>Login</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            {{ field.name|title }}
+                                        </div>
+                                        <div class="col-md-8">
+                                            {{ field }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {% comment "" %}
+                            {{ form.as_p }}
+                            {% endcomment %}
+                            <button class="btn-info rounded-pill" type="submit">Login</button>
+                            <p class="log-reg">If you don't have an account <a href="{% url 'register' %}">register</a>.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
